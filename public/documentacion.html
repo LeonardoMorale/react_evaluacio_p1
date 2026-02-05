@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Descargas</title>
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: white;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #6c757d;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-blue {
+            background-color: #0d6efd;
+        }
+
+        .btn-green {
+            background-color: #198754;
+        }
+
+        .btn-dark {
+            background-color: #212529;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Centro de Descargas</h1>
+        <p>Haz clic en los botones para obtener tus archivos PDF.</p>
+
+        <a href="comandos_react.pdf" class="btn btn-blue" download>
+            COMANDOS BÁSICOS DE REACT
+        </a>
+
+        <a href="iso_ieee.pdf" class="btn btn-green" download>
+            ISO / ESTANDAR IEEE
+        </a>
+
+        <a href="requerimientos.pdf" class="btn btn-dark" download>
+            REQUERIMIENTOS FUNCIONALES Y NO FUNCIONALES
+        </a>
+
+        <a href="python_sha256.pdf" class="btn btn-dark" download>
+            CÓDIGO PYTHON ALGORITMO SHA-256
+        </a>
+
+        <a href="/" class="btn btn-dark">
+            REGRESAR AL PROYECTO PRINCIPAL
+        </a>
+    </div>
+
+</body>
+</html>
