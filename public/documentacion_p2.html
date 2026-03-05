@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologías de Desarrollo de Software</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: 2.2em; margin-bottom: 5px; }
+        h2 { font-size: 1.6em; font-weight: normal; margin-top: 5px; margin-bottom: 20px; color: #555; }
+        h3 { font-size: 1.4em; margin-top: 40px; margin-bottom: 30px; }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .method-btn {
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            min-width: 120px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: opacity 0.2s;
+        }
+
+        .method-btn:hover { opacity: 0.8; }
+
+        .btn-cascada { background-color: #007bff; }
+        .btn-modelov { background-color: #6c757d; }
+        .btn-agiles { background-color: #28a745; }
+        .btn-scrum { background-color: #dc3545; }
+        .btn-kanban { background-color: #ffc107; color: black; }
+        .btn-xp { background-color: #17a2b8; }
+        .btn-hibridas { background-color: #212529; }
+
+        .separator {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 40px 0;
+        }
+
+        .link-section { margin-bottom: 40px; }
+        .jira-link-container, .regresar-link-container {
+            display: inline-block;
+            margin: 10px;
+        }
+        .jira-link, .regresar-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            border: 2px dashed #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .final-text {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .example { font-weight: bold; color: black; }
+        .student { font-size: 1.3em; margin-top: 20px; color: black; font-weight: bold;}
+
+        /* Estilos del Modal Único */
+        .modal-overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo atenuado un poco más oscuro */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 800px; /* Un poco más ancho por si tus imágenes son grandes */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-header {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h4 { margin: 0; font-size: 1.2em; color: #333; font-weight: normal; }
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+        }
+        .close-modal:hover { color: #555; }
+
+        .modal-body {
+            padding: 20px;
+            text-align: center; /* Centra la imagen */
+            background-color: #fff; 
+        }
+
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <h1>METODOLOGÍAS DE DESARROLLO DE SW</h1>
+    <h2>¿Qué es una metodología de desarrollo de software?</h2>
+
+    <p class="description">
+        Las metodologías de desarrollo de software son un conjunto de técnicas y métodos organizativos que se aplican para diseñar soluciones de software informático. El objetivo de las distintas metodologías es el de intentar organizar los equipos de trabajo para que estos desarrollen las funciones de un programa de la mejor manera posible.
+    </p>
+
+    <h3>TIPOS DE METODOLOGÍAS</h3>
+
+    <div class="button-grid">
+        <button class="method-btn btn-cascada" data-imagen="cascada.png">CASCADA</button>
+        <button class="method-btn btn-modelov" data-imagen="modelo_v.png">MODELO V</button>
+        <button class="method-btn btn-agiles" data-imagen="agiles.png">ÁGILES</button>
+        <button class="method-btn btn-scrum" data-imagen="scrum.png">SCRUM</button>
+        <button class="method-btn btn-kanban" data-imagen="kanban.png">KANBAN</button>
+        <button class="method-btn btn-xp" data-imagen="xp.png">XP</button>
+        <button class="method-btn btn-hibridas" data-imagen="hibridas_modernas.png">HÍBRIDAS</button>
+    </div>
+
+    <hr class="separator">
+
+    <div class="link-section">
+        <h3>LINK A TABLERO DE TRABAJO</h3>
+        <div class="jira-link-container">
+            <a href="https://agoramaquinaria.atlassian.net/?continue=https%3A%2F%2Fagoramaquinaria.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&atlOrigin=eyJpIjoiYzFhMTQ5Njk4MmNiNDA0OGJlODcyYzllOWNkMTZjOTYiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9" class="jira-link" target="_blank">--- JIRA ---</a>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="regresar-link-container">
+        <a href="https://leonardomorale.github.io/react_evaluacio_p1/" class="regresar-link">--- REGRESAR MENÚ PRINCIPAL ---</a>
+    </div>
+
+    <p class="final-text example">" LA PEOR LUCHA ES LA QUE NO SE HACE "</p>
+    <p class="student">Alumno: Leonardo Morales Carrera</p>
+
+</div>
+
+<div class="modal-overlay" id="imageModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 id="modalTitle">Vista de Metodología</h4>
+            <button class="close-modal" id="closeModal">×</button>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="Imagen de Metodología">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Elementos del DOM
+    const modal = document.getElementById('imageModal');
+    const btnClose = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    
+    const methodBtns = document.querySelectorAll('.method-btn');
+
+    methodBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            modalTitle.textContent = 'Vista de ' + btn.textContent.trim();
+            
+            const rutaImagen = btn.getAttribute('data-imagen');
+            
+            modalImage.src = rutaImagen;
+            
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Función para cerrar el modal
+    btnClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modalImage.src = ""; // Limpiamos la imagen al cerrar
+    });
+
+    // Función para cerrar el modal si das clic en la parte oscura de atrás
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            modalImage.src = ""; // Limpiamos la imagen al cerrar
+        }
+    });
+</script>
+
+</body>
+</html>
