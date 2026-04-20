@@ -81,6 +81,12 @@ function App() {
               >
                 TABLERO JIRA PROYECTO AGORA
               </a>
+              <button
+                onClick={() => setIsLoggedIn(false)}
+                className="logout-btn"
+              >
+                CERRAR SESIÓN
+              </button>
             </>
           )}
         </div>
